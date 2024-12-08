@@ -1,0 +1,25 @@
+  .table-detail {
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chave-detail {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+  }
+  
+  td.key {
+    background-color: rgb(223, 223, 223);
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  td.value {
+    text-align: left;
+    background-color: #fff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }

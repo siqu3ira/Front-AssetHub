@@ -1,0 +1,121 @@
+.container {
+    padding: 2em;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.servidores {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.x {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servidores p {
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: bold;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.servidores > div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 32px;
+}
+
+.valor {
+    font-size: 50px;
+}
+
+.chave {
+    font-size: 30px;
+}
+
+#icon {
+    font-size: 30px;
+    color: gray;
+}
+
+.servidores-fisicos {
+    width: 25%;
+}
+
+.total-servidores {
+    width: 20%;
+}
+
+.servidores-linux {
+    width: 17.5%;
+}
+
+.servidores-windows {
+    width: 17.5%;
+}
+
+.graficos {
+    display: flex; /* Flex para posicionar os itens lado a lado */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    gap: 20px; /* Adiciona um pequeno espaço entre o gráfico e os dropdowns */
+    margin-top: 32px;
+}
+
+.dashboard-dropdowns {
+    display: flex;
+    flex-direction: column; /* Organiza os dropdowns em coluna */
+    gap: 10px; /* Adiciona espaçamento entre os dropdowns */
+    align-items: flex-start; /* Alinha os dropdowns à esquerda */
+}
+
+.graficos > div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Kodchasan', sans-serif;
+    position: relative;
+    margin-top: 20px;
+    display: flex; /* Adiciona display flex para centralizar os itens */
+    flex-direction: column; /* Define a direção do flex como coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+.grafico-so {
+    min-height: 500px; /* Defina uma altura mínima */
+}
+
+.grafico-so > div > div.echarts-legend {
+    position: absolute;
+    bottom: 20px; /* Ajuste a posição da legenda */
+    left: 50%; /* Centralize a legenda */
+    transform: translateX(-50%);
+}
+
+.graficos > div > h4 {
+    border-bottom: 1px solid black;
+    padding-bottom: 0; /* Reduz o espaçamento inferior do h4 */
+    margin-bottom: 0; /* Reduz a margem inferior do h4 */
+    margin-top: 0; /* Remove a margem superior do h4 */
+}
+
+@media (max-width: 768px) {
+    .graficos {
+        flex-direction: column; /* Alinha os itens na vertical em telas pequenas */
+        gap: 20px;
+    }
+
+    .dashboard-dropdowns {
+        align-items: center; /* Centraliza os dropdowns no celular */
+    }
+}

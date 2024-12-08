@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container_login {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.wrap_login {
+  width: 390px;
+  background-color: white;
+  border-radius: 26px;
+  overflow: hidden;
+  padding: 77px 55px 33px 55px;
+}
+
+.login_form{
+  width: 100%;
+}
+
+.login_form_title {
+  display: block;
+  font-size: 30px;
+  color: black;
+  font-family: 'Kodchasan', sans-serif;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.wrap_input {
+  font-family: "Istok Web", sans-serif;
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin-bottom: 37px;
+  margin-top: 40px; /*Correção temporária*/
+}
+
+.input {
+  font-size: 15px;
+  color: black;
+  line-height: 1.2;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  padding: 0 5px;
+}
+
+.focus_input {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: #adadad;
+}
+
+.focus_input::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #6a7dfe;
+  background: -webkit-linear-gradient(to left, #adadad, #FF204E);
+  background: -o-linear-gradient(to left, #adadad, #FF204E);
+  background: -moz-linear-gradient(to left, #adadad, #FF204E);
+  background: linear-gradient(to left, #adadad, #FF204E);
+}
+
+.focus_input::after {
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.2;
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  padding-left: 5px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input:focus {
+  outline: 0;
+}
+
+.input:focus + .focus_input::after {
+  top: -15px;
+}
+
+.input:focus + .focus_input::before {
+  width: 100%;
+}
+
+.has_val + .focus_input::after {
+  top: -15px;
+}
+
+.has_val + .focus-input::before {
+  width: 100%;
+}
+
+.container_login_form_btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 13px;
+}
+
+.login_form_btn {
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #FF204E;
+}
+
+.login_form_btn:hover {
+  cursor: pointer;
+}
+
+.login_form-btn > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #FF204E;
+}
+
+
+
+.login {
+display: flex;
+background-color: #070F2B;
+align-items: center;
+flex-direction: column;
+color: white;
+justify-content: space-evenly;
+height: 100vh;
+background-image: url(assets/dark_logo.png);
+background-repeat: no-repeat;
+background-position-x: 144px;
+background-position-y: 133px;
+background-size: 50rem;
+}
+
+.versao {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+font-family: "Istok Web", sans-serif;
+padding-top: 55px;
+}
+
+#logo {
+width: 60px;
+height: 60px;
+}
+
+.logo {
+font-family: 'Kodchasan', sans-serif;
+font-size: 60px;
+padding-bottom: 25px;
+}
+
+h3 {
+font-family: 'Kodchasan', sans-serif;
+margin-top: 80px;
+font-size: 40px;
+text-align: center;
+padding-bottom: 55px;
+}

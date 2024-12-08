@@ -1,0 +1,51 @@
+.hosts {
+    width: 80%;
+    margin: 0 auto; /* Para centralizar horizontalmente */
+    padding: 32px;
+}
+
+h1 {
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: bold;
+}
+
+.tabela {
+    margin-top: 61px;
+    border: solid 1px #C7C7C7;
+}
+
+th.label {
+    background-color: #C7C7C7;
+}
+
+.button-table {
+    border-left: solid 2px gray;
+    padding-left: 10px;
+}
+
+.button-tabela {
+    background-color: white;
+    color: gray;
+    border: solid 2px gray;
+}
+
+.button-tabela:hover {
+    background-color: rgb(194, 193, 193);
+    border: solid 2px gray;
+}
+
+.descricao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.descricao .texto {
+    justify-content: space-between;
+}
+
+.button-icon {
+    color: gray;
+    font-size: 15px;
+}

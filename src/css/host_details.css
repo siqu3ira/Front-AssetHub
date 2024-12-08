@@ -1,0 +1,42 @@
+.top-part {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Espaçamento entre os elementos */
+    left: 5%;
+}
+
+.top-part h2,
+.top-part h4 {
+    margin: 0; /* Remove margens extras */
+}
+
+.top-part .button-tabela {
+    margin-right: 10px; /* Opcional: ajusta o espaçamento à direita do botão */
+}
+
+.middle-part {
+    display: flex;
+    gap: 50px;
+    margin-top: 64px;
+}
+
+.descInput {
+    width: 300%;
+    height: 300px;
+}
+
+.bottom-part {
+    margin-top: 30px;
+    display: flex;
+    gap: 300px;
+}
+
+.tabela-usage {
+    margin-left: 200px;
+}
+
+.button-desc {
+    margin-top: 10px;
+}
