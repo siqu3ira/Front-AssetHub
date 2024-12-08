@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import "../css/hosts_virtuais.css";
 import { useQuery } from 'react-query';
-import { listarHosts } from '../api';
+import { listarHardware } from '../api';
 
 function Hardware() {
 
@@ -26,7 +26,7 @@ const Tabela = () => {
 
     const {data, isLoading, error} = useQuery(
         "query-hosts",
-        listarHosts,
+        listarHardware,
         {
             retry: 5,
             refetchInterval: 120000,
@@ -41,7 +41,7 @@ const Tabela = () => {
         return <div>Error fetching data: {error.message}</div>;
     }
 
-    console.log(data);
+    console.log(data.hardware);
 
     if (!data || !Array.isArray(data)) {
         return <div>No data available</div>;
@@ -58,9 +58,9 @@ const Tabela = () => {
             <tbody>
                 {data.map((host, index) => (
                     <tr key={index}>
-                        <td>{host[0]}</td> {/* Nome do host */}
+                        <td>{host.hardware}</td> {/* Nome do host */}
                         <td className='descricao'>
-                            <span className='texto'>Descrição {index + 1}</span>
+                            <span className='texto'>{host.description || "--"}</span>
                             <div className='button-table'>
                                 <Button className='button-tabela'>
                                     <FontAwesomeIcon icon={faChevronRight} className='button-icon'/>

@@ -1,11 +1,21 @@
 import axios from "axios";
 
-const baseUrl = 'http://192.168.192.237:6969/';
+const baseUrl = 'http://ec2-18-230-23-141.sa-east-1.compute.amazonaws.com:6969/';
 
 const listarHosts = async () => {
     try {
         const response = await axios.get(baseUrl + 'hosts/get_hosts');
         return response.data.Hosts;
+    } catch (error) {
+        console.error("Error fetching data: ", error);
+        throw error;
+    }
+};
+
+const listarHardware = async () => {
+    try {
+        const response = await axios.get(baseUrl + 'hardware/get_hardwares');
+        return response.data.Hardwares;
     } catch (error) {
         console.error("Error fetching data: ", error);
         throw error;
@@ -86,5 +96,5 @@ const getMediaCpu = async () => {
 
 
 export {
-    listarHosts, qtdHardware, qtdServidores, getHost, attDescHost, getMediaCpu
+    listarHosts, qtdHardware, qtdServidores, getHost, attDescHost, getMediaCpu, listarHardware
 }
