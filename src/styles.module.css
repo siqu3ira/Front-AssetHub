@@ -175,7 +175,7 @@ flex-direction: column;
 color: white;
 justify-content: space-evenly;
 height: 100vh;
-background-image: url(public/assets/dark_logo.png);
+background-image: url('/assets/dark_logo.png');
 background-repeat: no-repeat;
 background-position-x: 144px;
 background-position-y: 133px;
