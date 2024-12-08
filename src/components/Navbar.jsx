@@ -45,8 +45,8 @@ const Barra_de_Navegacao = () => {
         <>
             <Navbar expand={false} className="mb-3 navbar">
                 <Container fluid className="d-flex align-items-center justify-content-start">
-                    <Navbar.Toggle><img src='./public/assets/Expand_Tab.png'/></Navbar.Toggle>
-                    <Navbar.Brand><h1 className='logo-navbar m-0'> <img src=".\public\assets\logo.png" alt="Logo" id="logo" /> ASSET HUB</h1></Navbar.Brand>
+                    <Navbar.Toggle><img src='./assets/Expand_Tab.png'/></Navbar.Toggle>
+                    <Navbar.Brand><h1 className='logo-navbar m-0'> <img src=".\assets\logo.png" alt="Logo" id="logo" /> ASSET HUB</h1></Navbar.Brand>
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-false`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-false`}

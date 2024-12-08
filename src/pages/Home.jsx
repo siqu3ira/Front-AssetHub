@@ -73,7 +73,7 @@ function Home() {
                 <div className='servidores-windows'>
                     <div className='x'>
                         <p className='valor'>{windows}</p>
-                        <img src="./public/assets/windows.png" className='serverIcon'/> 
+                        <img src="./assets/windows.png" className='serverIcon'/> 
                     </div>
                     <p className='chave'>Windows</p>
                     <p className='texto'>Total de Servidores Windows</p>
@@ -81,7 +81,7 @@ function Home() {
                 <div className='servidores-linux'>
                     <div className='x'>
                         <p className='valor'>{linux}</p>
-                        <img src="./public/assets/linux.png" className='serverIcon'/>
+                        <img src="./assets/linux.png" className='serverIcon'/>
                     </div>
                     <p className='chave'>Linux</p>
                     <p className='texto'>Total de Servidores Linux</p>
