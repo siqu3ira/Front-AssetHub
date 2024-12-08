@@ -35,7 +35,7 @@ function Login() {
   return (
     <div className={styles.login}>
       <div className={styles.texto_login}>
-        <h1 className={styles.logo}> <img src=".\src\assets\logo.png" alt="Logo" id="logo" /> ASSET HUB</h1>
+        <h1 className={styles.logo}> <img src=".\public\assets\logo.png" alt="Logo" id="logo" /> ASSET HUB</h1>
         <h3 className={styles.texto}>Bem-Vindo</h3>
       </div>
       <div className={styles.container}>
