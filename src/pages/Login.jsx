@@ -17,19 +17,16 @@ function Login() {
       const usuarioValidado = await isAuthenticated(usuario, password);
       // localStorage.setItem('usuarioValidado', usuarioValidado);
 
-    if (usuarioValidado) {
-      // Se o usuário for validado, defina o valor 'true' no localStorage
-      localStorage.setItem('authenticated', true);
-      navigate("/home");
-    } else {
-      // Se a autenticação falhar, exiba uma mensagem de erro
-      setMessage("Usuário ou senha inválidos"); 
-    } 
-
-  } catch (error) {
-    console.error('Erro ao enviar requisição: ', error);
-    setMessage("Erro ao enviar requisição: " + error.message);
-  }
+      if (usuarioValidado) {
+        localStorage.setItem('authenticated', true);
+        navigate("/home");
+      } else {
+        setMessage("Usuário ou senha inválidos");
+      }
+    } catch (error) {
+      console.error('Erro ao enviar requisição: ', error);
+      setMessage("Erro ao enviar requisição: " + error.message);
+    }
   };
 
   return (
@@ -38,6 +35,13 @@ function Login() {
         <h1 className={styles.logo}> <img src=".\assets\logo.png" alt="Logo" id="logo" /> ASSET HUB</h1>
         <h3 className={styles.texto}>Bem-Vindo</h3>
       </div>
+
+      {message && (
+              <div className={styles.alert}>
+                {message}
+              </div>
+      )}
+
       <div className={styles.container}>
         <div className={styles.container_login}>
           <div className={styles.wrap_login}>
