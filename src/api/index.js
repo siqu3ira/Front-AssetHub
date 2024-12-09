@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from '../../config'
 
-const baseUrl = 'http://ec2-18-230-23-141.sa-east-1.compute.amazonaws.com:6969/';
+const baseUrl = BASE_URL;
 
 const listarHosts = async () => {
     try {
