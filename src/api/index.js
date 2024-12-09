@@ -1,10 +1,11 @@
 import axios from "axios";
-
 import BASE_URL from '../../config'
+
+const baseUrl = BASE_URL;
 
 const listarHosts = async () => {
     try {
-        const response = await axios.get(BASE_URL + 'hosts/get_hosts');
+        const response = await axios.get(baseUrl + 'hosts/get_hosts');
         return response.data.Hosts;
     } catch (error) {
         console.error("Error fetching data: ", error);
@@ -14,7 +15,7 @@ const listarHosts = async () => {
 
 const listarHardware = async () => {
     try {
-        const response = await axios.get(BASE_URL + 'hardware/get_hardwares');
+        const response = await axios.get(baseUrl + 'hardware/get_hardwares');
         return response.data.Hardwares;
     } catch (error) {
         console.error("Error fetching data: ", error);
@@ -24,7 +25,8 @@ const listarHardware = async () => {
 
 const qtdHardware = async () => {
     try {
-        const response = await axios.get(BASE_URL + 'hardware/get_hardware_count');
+        const response = await axios.get(baseUrl + 'hardware/get_hardware_count');
+
         if (response.data && 'Hardware_Count' in response.data) {
             return response.data;
         } else {
@@ -39,7 +41,8 @@ const qtdHardware = async () => {
 
 const qtdServidores = async () => {
     try {
-        const response = await axios.get(BASE_URL + 'hosts/get_host_ostype_count');
+        const response = await axios.get(baseUrl + 'hosts/get_host_ostype_count');
+
         if (response.data && 'Linux_Hosts' in response.data && 'Windows_Hosts' in response.data) {
             return response.data;
         } else {
@@ -54,7 +57,7 @@ const qtdServidores = async () => {
 
 const getHost = async (uuid) => {
     try {
-        const response = await axios.get(BASE_URL + 'hosts/get_host/' + uuid);
+        const response = await axios.get(baseUrl + 'hosts/get_host/' + uuid);
         return response.data.Host;
     } catch (error) {
         console.error("Error fetching data: ", error);
@@ -69,8 +72,8 @@ const attDescHost = async (uuid, desc) => {
             return;
         }
 
-        const url = `${BASE_URL}hosts/update_host_description/${uuid}`;
-        const params = { new_description: desc };
+        const url = `${baseUrl}hosts/update_host_description/${uuid}`;
+        const params = { new_description: desc }; // Adiciona o parâmetro na query string
 
         console.log("URL e parâmetros:", { url, params });
 
@@ -83,15 +86,16 @@ const attDescHost = async (uuid, desc) => {
 
 const getMediaCpu = async () => {
     try {
-        const response = await axios.get(BASE_URL + 'dashboard/memory_info');
+        const response = await axios.get(baseUrl + 'dashboard/memory_info');
         return response.data;
-        console.log("Média" + response);
+        console.log("Média" + response)
     } catch (error) {
         console.error("Error fetching data: ", error);
         throw error;
     }
 };
 
+
 export {
     listarHosts, qtdHardware, qtdServidores, getHost, attDescHost, getMediaCpu, listarHardware
-};
+}
