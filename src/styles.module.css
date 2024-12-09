@@ -174,7 +174,7 @@ align-items: center;
 flex-direction: column;
 color: white;
 justify-content: space-evenly;
-height: 100vh;
+height: 70rem;
 background-image: url('/assets/dark_logo.png');
 background-repeat: no-repeat;
 background-position-x: 144px;
