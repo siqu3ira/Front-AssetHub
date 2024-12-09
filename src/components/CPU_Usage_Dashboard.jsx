@@ -9,6 +9,9 @@ const CPUsageDashboard = ({ memoryMeans }) => {
 
     const myChart = echarts.init(chartRef.current);
 
+    // Verifica se há dados
+    const hasData = memoryMeans && memoryMeans.length > 0;
+
     const barColors = memoryMeans.map((value) => {
       if (value < 50) return "#52c41a"; // Verde
       if (value < 90) return "#faad14"; // Amarelo
@@ -48,15 +51,17 @@ const CPUsageDashboard = ({ memoryMeans }) => {
           color: "#999",
         },
       },
-      series: [
-        {
-          type: "bar",
-          data: memoryMeans,
-          itemStyle: {
-            color: (params) => barColors[params.dataIndex],
-          },
-        },
-      ],
+      series: hasData
+        ? [
+            {
+              type: "bar",
+              data: memoryMeans,
+              itemStyle: {
+                color: (params) => barColors[params.dataIndex],
+              },
+            },
+          ]
+        : [],
       tooltip: {
         trigger: "axis",
         formatter: (params) => {
@@ -64,6 +69,18 @@ const CPUsageDashboard = ({ memoryMeans }) => {
           return `${name}: ${data.toFixed(2)}%`;
         },
       },
+      graphic: !hasData
+        ? {
+            type: "text",
+            left: "center",
+            top: "middle",
+            style: {
+              text: "Sem dados disponíveis",
+              fontSize: 18,
+              fill: "#999",
+            },
+          }
+        : null,
     };
 
     myChart.setOption(option);
