@@ -30,11 +30,11 @@ const Barra_de_Navegacao = () => {
     };
     
     const ambiente = () => {
-        window.location.href = '/ambiente';
+        window.location.href = '/em-desenvolvimento';
     };
     
     const site = () => {
-        window.location.href = '/site';
+        window.location.href = '/em-desenvolvimento';
     };
 
     const dashBoard = () => {
@@ -74,10 +74,10 @@ const Barra_de_Navegacao = () => {
                                     title={<span className="ms-2 side-menu-text"><FontAwesomeIcon icon={faCog} /> Configurações</span>}
                                     id={`offcanvasNavbarDropdown-configuracoes`}
                                 >
-                                    <NavDropdown.Item href="#action3">Organizações</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">Usuários</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">Grupos</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">Sobre</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action3" onClick={site}>Organizações</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action4" onClick={site}>Usuários</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action5" onClick={site}>Grupos</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action5" onClick={site}>Sobre</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Offcanvas.Body>

@@ -15,6 +15,7 @@ import Ambiente from './pages/Ambiente.jsx';
 import Site from './pages/Site.jsx';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Host_Details from './pages/Host_Details.jsx';
+import EmDesenvolvimento from './pages/Pagina_Nao_Finalizada.jsx';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,14 @@ const router = createBrowserRouter([
     
     <PrivateRoute>
       <Host_Details />
+    </PrivateRoute>
+  },
+  {
+    path: "/em-desenvolvimento",
+    element: 
+    
+    <PrivateRoute>
+      <EmDesenvolvimento />
     </PrivateRoute>
   },
   {
